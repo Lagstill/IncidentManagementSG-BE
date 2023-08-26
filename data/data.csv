@@ -1,50 +1,328 @@
 Type,Issue ,Resolution
 FTR,File from Upstream Application is not reaching the downstream application folder.,FTR configuration (EDI) was not updated in the downstream application post informatica migration. The config was updated to resolve this issue.
-,Hyperion Essbase script was creating the file in source folder but failed to push it to the target folder.,2 jobs were creating 2 files at the same time which is creating deadlock while pushing the file in FTR. Jobs were rescheduled to fix this issue.
-,Upstream to downstream FTR  failed due to Keys.,"SSH keys mismatch, dev team sent the public SSH keys which FTR team updated at their end"
-,Files were created in upstream but 0 kb files were sent to downstream., Autosys team corrected the connection at autosys server end  to Fix it.
+FTR,Hyperion Essbase script was creating the file in source folder but failed to push it to the target folder.,2 jobs were creating 2 files at the same time which is creating deadlock while pushing the file in FTR. Jobs were rescheduled to fix this issue.
+FTR,Upstream to downstream FTR  failed due to Keys.,"SSH keys mismatch, dev team sent the public SSH keys which FTR team updated at their end"
+FTR,FTR data transfer delay due to API rate limiting.,Investigating aggregation problem; refining financial forecasts.
+FTR,Inaccurate FTR data aggregation affecting financial forecasts.,Adjusting API usage; resuming transfer when limits are lifted.
+FTR,FTR data transformation error affecting investment portfolio.,Rectifying transformation error; ensuring accurate portfolio data.
+FTR,FTR data transfer interrupted by database connectivity issue.,Addressing database connectivity issue; resuming interrupted transfer.
+FTR,FTR data aggregation discrepancy affecting business insights.,Investigating aggregation discrepancy; refining business insights.
+FTR,FTR data transfer delay due to data transformation issue.,Investigating data transformation issue; resuming transfer after resolution.
+FTR,FTR data validation error leading to customer concern.,Addressing validation error; addressing customer feedback.
+FTR,FTR data transfer failure due to target system unavailability.,Monitoring target system status; initiating transfer when resolved.
+FTR,FTR data aggregation error affecting financial analysis.,Investigating aggregation error; refining financial analysis.
+FTR,FTR data transfer interrupted by network security breach.,Addressing security breach; resuming interrupted transfer.
+FTR,FTR data transformation error affecting trade settlement.,Rectifying transformation error; ensuring accurate trade settlement.
+FTR,FTR data transfer delay due to data mapping issue.,Investigating data mapping issue; resuming transfer after resolution
+FTR,FTR data validation error causing customer frustration.,Addressing validation error; resolving customer concerns.
+FTR,FTR data transfer failure due to system unavailability.,Monitoring system status; initiating transfer when resolved.
+FTR,FTR data aggregation problem affecting financial insights.,Investigating aggregation problem; improving financial insights.
+FTR,FTR data transfer delay due to data transformation glitch.,Investigating data transformation problem; resuming transfer after resolution.
+FTR,FTR data validation issue affecting financial reporting.,Rectifying validation issue; ensuring accurate financial reporting.
+FTR,FTR data transfer failure due to incorrect data version.,Verifying data version compatibility; restarting data transfer.
+FTR,Transformation issue affecting fee calculations.,Reviewing transformation logic; ensuring accurate fee calculations.
+FTR,FTR data transfer delay due to API downtime.,Monitoring API status; resuming data transfer when operational.
+FTR,Files were created in upstream but 0 kb files were sent to downstream., Autosys team corrected the connection at autosys server end  to Fix it.
 Essbase,OPMN Services are down in Hyperion Essbase server,Essbase is not accessible. Windows team restarted the services to fix it
-,Essbase server switched from Primary to backup node which is not configured.,"Essbase is not accessible, Windows team needs to switch the instance back to resolve the issue."
-,Essbase config file was corrupted,Essbase server was unreachable. Restore the config file from the backup to fix the issue
+Essbase,Essbase server switched from Primary to backup node which is not configured.,"Essbase is not accessible, Windows team needs to switch the instance back to resolve the issue."
+Essbase,Unable to connect to Essbase server.,"Checked network settings and firewall rules, ensured Essbase server is up and running."
+Essbase,"Essbase calculation script failing with ""Member not found"" error.","Reviewed the calculation script for member references, corrected the syntax, and re-ran the script."
+Essbase,"Error while loading data into Essbase cube, ""Data load failed - Invalid intersection.""","Identified the data source causing the issue, fixed data formatting, and reloaded successfully."
+Essbase,Slow query performance in Essbase reports.,"Analyzed query design, added necessary indexes to improve performance, and optimized report layout."
+Essbase,Essbase database crashes randomly with no apparent reason.,"Reviewed system logs, identified memory leaks, and applied relevant patches to stabilize the system."
+Essbase,Users unable to retrieve accurate data due to Essbase cube not being refreshed.,Checked and adjusted the refresh schedule to ensure data is updated at appropriate intervals.
+Essbase,"Received ""Maximum number of connections reached"" error in Essbase.",Adjusted the maximum connection settings in Essbase configuration to accommodate increased load.
+Essbase,Essbase outline changes not reflecting in reports.,"Ensured outline synchronization and data dictionary update, then verified report connectivity."
+Essbase,Unable to start Essbase Administration Server.,"Checked system services, identified conflicting processes, and restarted the server after resolving conflicts."
+Essbase,Essbase security changes not taking effect.,"Reviewed user and group permissions, checked shared services configuration, and synchronized security settings."
+Essbase,Essbase server fails to start.,"Reviewed server logs, identified missing configuration file, and restored it from backup."
+Essbase,Calculation script produces incorrect results.,"Checked formulae for errors, found missing parentheses, and corrected the script."
+Essbase,Essbase cube data not updated after ETL process.," Examined ETL workflow, identified failed job, and reconfigured it to ensure successful data loading."
+Essbase,"Error ""Cannot load data - Member not found.""","Reviewed data mapping, corrected member references, and reloaded data."
+Essbase,Poor performance in Essbase retrieval operations.,"Analyzed query design, tuned server settings, and added relevant indexes to optimize performance."
+Essbase,Unable to establish connection to Essbase from client.,"Checked network connectivity, ensured proper port configuration, and verified firewall settings."
+Essbase,Essbase crashes during data load.,"Monitored server memory usage, increased memory allocation, and optimized data load process."
+Essbase,Users experience intermittent disconnects from Essbase.,"Investigated network stability, upgraded network infrastructure, and applied recommended patches."
+Essbase,Essbase Web interface not accessible.,"Checked Web server status, identified misconfigured virtual directory, and corrected the configuration."
+Essbase,Essbase report generation schedule not functioning as intended.,"Reviewed job scheduler settings, corrected cron expressions, and ensured consistent and accurate report generation."
+Essbase,Essbase config file was corrupted,Essbase server was unreachable. Restore the config file from the backup to fix the issue
 Database,Servers are not accessible due to Diskspace issue,Clean the unwanted large files/logs manually to increase the freespace to fix the issue.
-,Treatments are getting failed as no space in Temp DB,Freed Tempdb space to fix the incident.
-,Treatments are getting failed in Database as Tablespace is full.,Added more spaceinto the filesystem by DBA team to resolve the issue
-,Informatica is down due to DB issue,Db password was expired and reactivation the issue was resolved.
-,Application stopped working after DB release,While performing the Changes Dba misunderstood the requirement and decomissioned one active service by mistake. Service was restored by DBA and listeners were restarted to fix this.
-,Application is not accessible due to disk crash,Restore the database with backup to fix this issue
-,Batch failed in production environment due to DB connectivity issue,DBA parameter threshhold was updated to fix this issue.
-Application,Application GUI was down,restart the App pool for the application to fix it.
+Database,Treatments are getting failed as no space in Temp DB,Freed Tempdb space to fix the incident.
+Database,Treatments are getting failed in Database as Tablespace is full.,Added more spaceinto the filesystem by DBA team to resolve the issue
+Database,Informatica is down due to DB issue,Db password was expired and reactivation the issue was resolved.
+Database,Application stopped working after DB release,While performing the Changes Dba misunderstood the requirement and decomissioned one active service by mistake. Service was restored by DBA and listeners were restarted to fix this.
+Database,Application is not accessible due to disk crash,Restore the database with backup to fix this issue
+Database,Unable to connect to the database server,"Verified network connectivity, checked firewall settings, and confirmed correct database server address."
+Database,"Database query running indefinitely, affecting performance.","Reviewed query execution plan, added necessary indexes, and optimized the query for faster performance."
+Database,"Error ""Table does not exist"" when attempting to access a table.","Checked schema spelling, confirmed table existence, and ensured the correct schema is being accessed."
+Database,Database backup failed due to insufficient disk space.,"Increased available disk space, reviewed backup settings for compression, and successfully completed the backup."
+Database, Slow database response times during peak usage.,"Monitored server resources, optimized query caching, and allocated additional resources to the server."
+Database,Data import process halted due to data type mismatch.,"Reviewed data mapping, corrected data type mismatches, and resumed data import successfully."
+Database,Incorrect data aggregation leading to inaccurate reports.,"Analyzed aggregation logic, identified errors, and fixed aggregation methods to ensure accurate reporting."
+Database,Database transaction deadlock detected.,"Investigated deadlock scenario, modified transaction order, and implemented retry mechanism to prevent deadlocks."
+Database,Database server crashes after a recent software update.,"Rolled back the software update, identified compatibility issues, and applied patches for stable operation."
+Database,Unique key constraint violation during data insertion.,"Reviewed data sources, identified duplicate entries, and resolved duplicate data issues."
+Database,Database replication lag causing data inconsistencies.,"Monitored replication status, identified lagging replica, and optimized replication processes for data consistency."
+Database,Database index corruption impacting query performance.,"Rebuilt the corrupted index, optimized index maintenance, and verified improved query performance."
+Database,Long-running transaction impacting overall database performance,"Reviewed transaction logic, divided into smaller transactions, and ensured timely commits for better performance."
+Database,Database user account locked out due to multiple failed login attempts,"Reset the user account password, reviewed login attempts, and educated the user about proper credentials."
+Database,Database data export to CSV results in formatting issues.,"Adjusted export settings, specified column delimiters, and successfully generated properly formatted CSV files."
+Database,Database schema changes not reflected in application.,"Verified application connection settings, refreshed schema metadata, and confirmed application schema synchronization."
+Database,Disk failure in RAID array affecting database availability.,"Replaced the failed disk, initiated RAID array rebuild, and ensured continued database availability."
+Database,Database stored procedure returning incorrect results.,"Reviewed procedure logic, identified coding errors, and corrected the procedure for accurate results."
+Database,Database data purging process causing lock contention.,"Implemented batch processing for data purging, optimized delete operations, and resolved lock contention issues."
+Database,Database upgrade encountering errors and rolling back.,"Analyzed upgrade logs, resolved compatibility issues, and successfully completed the database upgrade."
 "Server Outage
-
 ","Hardware Failure: Critical server components fail, leading to server unavailability.",AI system detects hardware failures through monitoring and alerts admins for replacement.
-,Power Supply Issues: Power disruptions cause servers to shut down unexpectedly.,AI system installs backup power supply and automatically restarts affected servers.
-,Network Connectivity Problems: Network connection failures isolate servers from the network.,"AI system detects network issues, restarts network services, and logs incidents for review."
-,"Software Crashes: Critical software running on servers crashes, rendering them unusable.","AI system attempts to restart software, roll back to stable version, or initiate a failover."
-,"Resource Exhaustion: Server resources such as CPU, memory, or disk space are fully utilized.","AI system allocates additional resources, optimizes processes, or migrates services."
+"Server Outage
+",Power Supply Issues: Power disruptions cause servers to shut down unexpectedly.,AI system installs backup power supply and automatically restarts affected servers.
+"Server Outage
+",Network Connectivity Problems: Network connection failures isolate servers from the network.,"AI system detects network issues, restarts network services, and logs incidents for review."
+"Server Outage
+","Software Crashes: Critical software running on servers crashes, rendering them unusable.","AI system attempts to restart software, roll back to stable version, or initiate a failover."
+"Server Outage
+",Server outage caused by a misconfigured router.,"Reviewed router settings, corrected misconfigurations, and restored proper routing to eliminate the outage."
+"Server Outage
+",Server outage due to a memory leak in a running application.,"Identified memory-hogging application, fixed the memory leak, and prevented future memory-related outages."
+"Server Outage
+",Server outage triggered by a sudden spike in traffic.,"Implemented load balancing, optimized server resources, and accommodated traffic fluctuations to prevent future outages."
+"Server Outage
+",Server outage caused by a hardware driver conflict.,"Identified conflicting driver, updated or rolled back the driver, and ensured stable server operation"
+"Server Outage
+",Server outage due to a ransomware attack.,"Isolated affected systems, removed ransomware, restored data from backups, and enhanced security measures."
+"Server Outage
+",Server outage due to a misconfigured network switch,"Reviewed switch settings, reconfigured VLANs, and restored proper network routing to resolve the outage."
+"Server Outage
+",Server outage caused by a faulty network cable.,"Inspected network cables, replaced the faulty cable, and verified consistent network connectivity."
+"Server Outage
+",Server outage due to disk space exhaustion.,"Cleared unnecessary files, expanded storage capacity, and implemented monitoring to prevent future disk space-related outages."
+"Server Outage
+",Server outage caused by a failed operating system update.,"Rolled back the OS update, diagnosed compatibility issues, and installed a stable update to restore server functionality."
+"Server Outage
+",Server outage triggered by incorrect firewall configuration.,"Reviewed firewall rules, corrected misconfigured settings, and ensured proper traffic flow to and from the server."
+"Server Outage
+",Server outage due to insufficient memory.,"Upgraded server memory, adjusted memory allocation settings, and prevented memory-related outages."
+"Server Outage
+",Server outage caused by a security breach.,"Investigated the breach, closed security vulnerabilities, performed system cleanup, and restored secure server operation."
+"Server Outage
+",Server outage resulting from a software bug.,"Identified the bug's root cause, developed and applied a software patch, and verified stable server operation."
+"Server Outage
+",Server outage due to database connection overload.,Server outage due to database connection overload.
+"Server Outage
+",Server outage caused by a network infrastructure failure.,"Investigated network equipment, identified faulty device, and replaced it to restore network connectivity and server accessibility."
+"Server Outage
+",Server outage due to overheating.,"Improved server room ventilation, installed additional cooling systems, and maintained optimal operating temperatures."
+"Server Outage
+",Distributed denial-of-service (DDoS) attack leading to server downtime.,"Deployed DDoS protection solutions, filtered malicious traffic, and restored server accessibility."
+"Server Outage
+",Server outage triggered by software update.,"Rolled back the recent software update, identified compatibility issues, and applied necessary patches before reattempting the update."
+"Server Outage
+",Server outage caused by hardware component failure.,"Identified faulty hardware component, replaced it with a new one, and ensured server stability."
+"Server Outage
+",Server outage due to power failure.,"Installed uninterruptible power supply (UPS) units, configured automatic shutdown procedures, and restored server functionality."
+"Server Outage
+","Resource Exhaustion: Server resources such as CPU, memory, or disk space are fully utilized.","AI system allocates additional resources, optimizes processes, or migrates services."
 "Database Performance Degradation
-
 ","Index Fragmentation: Database indexes become fragmented, leading to slow query execution.",AI system schedules regular index maintenance to defragment indexes.
-,Data Volume Increase: Growing data volume results in longer query times and performance issues.,"AI system optimizes queries, implements query caching, or proposes database partitioning."
-,"Resource Contention: Other processes compete for database resources, slowing queries.","AI system adjusts resource allocation, prioritizing critical queries."
-,Query Plan Changes: Database query optimizer generates suboptimal query plans.,"AI system analyzes query plans, identifies bottlenecks, and suggests optimizations."
-,Server Misconfiguration: Incorrect database configuration impacts performance.,"AI system detects and reverts misconfigurations, restores optimal settings."
+"Database Performance Degradation
+",Data Volume Increase: Growing data volume results in longer query times and performance issues.,"AI system optimizes queries, implements query caching, or proposes database partitioning."
+"Database Performance Degradation
+","Resource Contention: Other processes compete for database resources, slowing queries.","AI system adjusts resource allocation, prioritizing critical queries."
+"Database Performance Degradation
+",Query Plan Changes: Database query optimizer generates suboptimal query plans.,"AI system analyzes query plans, identifies bottlenecks, and suggests optimizations."
+"Database Performance Degradation
+",Database query response times have significantly increased.,"Reviewed query execution plan, optimized indexes, and cached frequently used queries for improved performance."
+"Database Performance Degradation
+",Data retrieval from the database is slow during peak hours.,"Implemented query caching, distributed load using read replicas, and optimized database server resources."
+"Database Performance Degradation
+",Frequent timeouts when connecting to the database.,"Reviewed connection pool settings, increased connection limits, and improved connection management."
+"Database Performance Degradation
+",Application experiencing delays due to database locking.,"Analyzed transaction isolation levels, optimized queries, and adjusted locking strategies to minimize contention."
+"Database Performance Degradation
+",Slow data aggregation in large database tables.,"Partitioned the table, applied proper indexing, and optimized aggregation queries for faster performance."
+"Database Performance Degradation
+",Database experiencing high I/O wait times.,"Reviewed storage performance, optimized disk layout, and employed caching mechanisms to reduce I/O waits."
+"Database Performance Degradation
+",Index fragmentation causing performance degradation.,"Scheduled regular index maintenance, rebuilt fragmented indexes, and monitored for sustained performance."
+"Database Performance Degradation
+",High CPU utilization impacting database response times.,"Identified CPU-intensive queries, optimized query plans, and distributed workloads to alleviate CPU usage."
+"Database Performance Degradation
+",Memory exhaustion leading to database slowdown.,"Tuned memory allocation settings, optimized queries to use memory efficiently, and added more RAM if needed."
+"Database Performance Degradation
+",Database backup processes causing performance degradation.,"Adjusted backup schedule, optimized backup settings, and performed backups during off-peak hours."
+"Database Performance Degradation
+","Database statistics outdated, impacting query optimization.","Scheduled regular statistics updates, performed analysis of query plans, and ensured accurate query optimization."
+"Database Performance Degradation
+",Slow data imports affecting real-time updates.,"Utilized bulk insert methods, disabled indexes during imports, and optimized import workflows for faster data ingestion."
+"Database Performance Degradation
+",Frequent table scans leading to performance bottlenecks.,"Reviewed query plans, added appropriate indexes, and optimized queries to minimize full table scans."
+"Database Performance Degradation
+",Database locking conflicts causing deadlocks.,"Adjusted transaction isolation levels, implemented row-level locking, and added error handling to prevent deadlocks."
+"Database Performance Degradation
+",Stored procedures executing slowly.,"Reviewed procedure code, optimized queries within procedures, and cached frequently executed procedures."
+"Database Performance Degradation
+",Slow response times when updating records.,"Implemented batching for updates, optimized update queries, and ensured proper indexing for faster updates."
+"Database Performance Degradation
+",Long-running queries causing performance issues.,"Identified resource-intensive queries, optimized query logic, and implemented query timeouts to prevent lengthy execution."
+"Database Performance Degradation
+",Database experiencing high disk latency,"Reviewed storage performance metrics, optimized disk I/O patterns, and upgraded storage hardware if necessary."
+"Database Performance Degradation
+",Memory leaks leading to gradual performance degradation.,"Monitored memory usage, identified memory leak sources, and fixed memory leaks in application code."
+"Database Performance Degradation
+",Database upgrade resulted in performance regression.,"Analyzed upgrade changes, identified performance regressions, and applied necessary patches or configuration adjustments."
+"Database Performance Degradation
+",Server Misconfiguration: Incorrect database configuration impacts performance.,"AI system detects and reverts misconfigurations, restores optimal settings."
 "Network Connectivity Issues
-
 ",DNS Resolution Failures: DNS servers fail to resolve domain names to IP addresses.,"AI system verifies DNS server health, switches to backup servers, and logs the incident."
-,Firewall Blocking: Incorrect firewall rules prevent users from accessing specific resources.,"AI system reviews firewall rules, corrects misconfigurations, and ensures proper access."
-,"Router Malfunctions: Network routers malfunction, causing intermittent connectivity issues.","AI system monitors router health, triggers diagnostics, and alerts administrators."
-,Bandwidth Saturation: Excessive network traffic saturates available bandwidth.,"AI system identifies traffic spikes, prioritizes critical traffic, and recommends bandwidth upgrades."
-,VPN Connectivity Problems: Users encounter problems connecting to the corporate VPN.,"AI system monitors VPN connections, troubleshoots failures, and guides users through reconnection."
+"Network Connectivity Issues
+",Firewall Blocking: Incorrect firewall rules prevent users from accessing specific resources.,"AI system reviews firewall rules, corrects misconfigurations, and ensures proper access."
+"Network Connectivity Issues
+","Router Malfunctions: Network routers malfunction, causing intermittent connectivity issues.","AI system monitors router health, triggers diagnostics, and alerts administrators."
+"Network Connectivity Issues
+",Bandwidth Saturation: Excessive network traffic saturates available bandwidth.,"AI system identifies traffic spikes, prioritizes critical traffic, and recommends bandwidth upgrades."
+"Network Connectivity Issues
+",Unable to access the internet due to a network outage.,"Checked router/modem status, contacted the Internet Service Provider (ISP), and resolved the outage."
+"Network Connectivity Issues
+",Slow internet connection speeds.,"Checked for background downloads/uploads, optimized router settings, and upgraded the internet plan if needed."
+"Network Connectivity Issues
+",Intermittent Wi-Fi disconnections.,"Analyzed Wi-Fi signal strength, adjusted router placement, and updated router firmware for stable connections."
+"Network Connectivity Issues
+",Inability to access specific websites.,"Verified DNS settings, cleared browser cache, and checked for website server issues."
+"Network Connectivity Issues
+",VPN connection failures.,"Reviewed VPN settings, ensured compatibility with network configuration, and reconfigured VPN if necessary."
+"Network Connectivity Issues
+",Network printer not accessible.,"Checked printer connections, verified network settings, and reconfigured printer IP address if needed."
+"Network Connectivity Issues
+",VoIP calls experiencing frequent drops.,"Analyzed network bandwidth, optimized Quality of Service (QoS) settings, and prioritized VoIP traffic."
+"Network Connectivity Issues
+",Slow network file transfers.,"Checked network congestion, ensured Gigabit Ethernet compatibility, and optimized file transfer protocols."
+"Network Connectivity Issues
+",Networked devices unable to communicate with each other.,"Checked subnet configurations, adjusted firewall settings, and ensured devices were on the same network segment."
+"Network Connectivity Issues
+",Network latency affecting online gaming.,"Monitored network latency, optimized router settings for gaming traffic, and selected optimal game servers."
+"Network Connectivity Issues
+",Remote desktop connections failing.,"Verified remote access settings, allowed remote connections through firewalls, and checked RDP service status."
+"Network Connectivity Issues
+",Web applications slow to load.,"Analyzed server response times, optimized application code, and leveraged Content Delivery Networks (CDNs) for better performance."
+"Network Connectivity Issues
+",Network congestion during peak hours.,"Monitored network traffic patterns, optimized bandwidth allocation, and implemented traffic shaping."
+"Network Connectivity Issues
+",Wi-Fi network not visible.,"Checked router Wi-Fi settings, adjusted channel frequencies, and ensured SSID broadcasting was enabled."
+"Network Connectivity Issues
+",Network printers not receiving print jobs.," Verified printer connections, updated printer drivers, and restarted print spooler service."
+"Network Connectivity Issues
+",Slow VPN performance.," Optimized VPN server settings, utilized faster encryption algorithms, and minimized network bottlenecks."
+"Network Connectivity Issues
+",Network devices not obtaining IP addresses.,"Reviewed DHCP server settings, ensured DHCP service was running, and validated IP address pool availability."
+"Network Connectivity Issues
+",Video conferencing quality issues.,"Analyzed network bandwidth, optimized video conferencing software settings, and allocated sufficient bandwidth for calls."
+"Network Connectivity Issues
+",Network interruptions due to IP conflicts.,"Identified conflicting IP addresses, updated devices' IP settings, and configured DHCP to prevent conflicts."
+"Network Connectivity Issues
+",Slow download speeds on a wired connection.,"Checked Ethernet cable quality, verified network adapter settings, and optimized network driver settings."
+"Network Connectivity Issues
+",VPN Connectivity Problems: Users encounter problems connecting to the corporate VPN.,"AI system monitors VPN connections, troubleshoots failures, and guides users through reconnection."
 "Application Performance Drop
-
 ","Memory Leaks: Applications consume increasing amounts of memory, leading to crashes.","AI system monitors memory usage, triggers cleanups, and restarts affected applications."
-,Compatibility Issues: Application updates cause conflicts with other software components.,"AI system tests updates in a sandbox, checks for conflicts, and recommends adjustments."
-,Database Connection Failures: Applications cannot connect to the database.,"AI system detects connection failures, retries connections, and logs the incident."
-,"Resource Starvation: Applications compete for system resources, causing slowdowns.","AI system monitors resource usage, optimizes resource allocation, and initiates load balancing."
-,External API Failures: Applications rely on external APIs that experience outages or delays.,"AI system monitors API status, switches to backup APIs, and retries failed requests."
-"Data Import Failure
-",API Changes: External APIs used for data import change their structure or endpoints.,"AI system adapts import scripts, tests new APIs, and updates data mapping."
-,Data Format Incompatibility: Imported data is in a format not supported by the import process.,"AI system identifies data format mismatches, transforms data, and retries imports."
-,Network Disruptions: Network connectivity issues prevent data transfer from external sources.,"AI system monitors network status, retries transfers, and alerts administrators."
-,Authentication Failures: Access credentials for external sources are incorrect or expired.,"AI system updates credentials, attempts reauthentication, and logs incidents."
-,Data Volume Overload: Large data volumes overwhelm the import process.,"AI system optimizes data import jobs, batches data transfers, and adjusts processing times."
+"Application Performance Drop
+",Compatibility Issues: Application updates cause conflicts with other software components.,"AI system tests updates in a sandbox, checks for conflicts, and recommends adjustments."
+"Application Performance Drop
+",Database Connection Failures: Applications cannot connect to the database.,"AI system detects connection failures, retries connections, and logs the incident."
+"Application Performance Drop
+","Resource Starvation: Applications compete for system resources, causing slowdowns.","AI system monitors resource usage, optimizes resource allocation, and initiates load balancing."
+"Application Performance Drop
+",Banking application response time has significantly increased during peak hours,"Analyzed server load, optimized database indexes, and scaled resources to handle peak user activity."
+"Application Performance Drop
+",Sluggish performance when customers try to transfer funds.,"Improved transaction processing efficiency, optimized database queries, and utilized in-memory caching for quicker transfers."
+"Application Performance Drop
+",Delays in updating account balances after transactions.,"Implemented real-time account balance updates, optimized transaction processing, and used distributed caching."
+"Application Performance Drop
+",Slow login and authentication processes.,"Employed multi-factor authentication (MFA) optimization, cached user credentials securely, and fine-tuned authentication services."
+"Application Performance Drop
+",Frequent timeouts during online bill payments.,"Enhanced payment gateway integration, optimized payment validation, and implemented request retries for reliability."
+"Application Performance Drop
+",Application hangs when viewing transaction history.,"Refactored transaction history queries, employed pagination, and optimized query execution for smoother browsing."
+"Application Performance Drop
+",Long wait times when retrieving account details.,"Utilized microservices architecture, optimized service orchestration, and enabled asynchronous data fetching."
+"Application Performance Drop
+",Slow customer support chat functionality.,"Leveraged WebSockets for real-time chat, implemented chat message queuing, and optimized chat message delivery."
+"Application Performance Drop
+",Performance degradation when accessing investment portfolio data.,"Implemented data caching for portfolios, optimized investment calculation algorithms, and ensured seamless data retrieval."
+"Application Performance Drop
+",Slower response times for credit card transaction approvals.,"Enhanced credit card processing pipeline, optimized fraud detection algorithms, and streamlined transaction authorization."
+"Application Performance Drop
+",Application crashes during loan application submission.,"Conducted thorough application testing, identified memory leaks, and patched application code to prevent crashes."
+"Application Performance Drop
+",Performance drop when generating financial reports.,"Precomputed report aggregates, optimized report generation queries, and employed background report generation."
+"Application Performance Drop
+",Sluggish performance when viewing mortgage options.,"Utilized caching for mortgage rate data, optimized loan eligibility calculations, and ensured responsive UI updates."
+"Application Performance Drop
+",Slow response when processing international wire transfers.,"Optimized currency conversion algorithms, employed asynchronous processing for wire transfers, and monitored payment gateways."
+"Application Performance Drop
+",Delays in updating interest rates on savings accounts.,"Implemented real-time interest rate updates, optimized rate calculation, and utilized distributed caching for rates."
+"Application Performance Drop
+",Performance drop during credit score checks.,"Optimized credit scoring algorithms, utilized in-memory data storage for credit data, and implemented parallel processing."
+"Application Performance Drop
+",Slow performance when retrieving tax-related documents.,"Indexed tax document metadata, optimized document retrieval queries, and cached frequently accessed documents."
+"Application Performance Drop
+",Application slowdown during mobile check deposit.,"Optimized image processing for check deposits, utilized background processing, and employed compression for image data."
+"Application Performance Drop
+",Performance degradation when calculating loan amortization.,"Precomputed loan amortization tables, optimized calculation algorithms, and enabled efficient retrieval of amortization schedules."
+"Application Performance Drop
+",External API Failures: Applications rely on external APIs that experience outages or delays.,"AI system monitors API status, switches to backup APIs, and retries failed requests."
+Data Import Failure,API Changes: External APIs used for data import change their structure or endpoints.,"AI system adapts import scripts, tests new APIs, and updates data mapping."
+Data Import Failure,Data Format Incompatibility: Imported data is in a format not supported by the import process.,"AI system identifies data format mismatches, transforms data, and retries imports."
+Data Import Failure,Network Disruptions: Network connectivity issues prevent data transfer from external sources.,"AI system monitors network status, retries transfers, and alerts administrators."
+Data Import Failure,Authentication Failures: Access credentials for external sources are incorrect or expired.,"AI system updates credentials, attempts reauthentication, and logs incidents."
+Data Import Failure,Data import of customer transaction history failed.,"Reviewed data format, adjusted import mapping, and successfully reimported transaction records."
+Data Import Failure,Failed data import of new customer accounts.,"Investigated data source, corrected formatting issues, and reimported account details successfully."
+Data Import Failure,Data import of interest rates did not update as expected.,"Checked data source availability, identified file corruption, and performed a successful import after obtaining correct data."
+Data Import Failure,Data import for credit card payments resulted in duplicate entries.,"Analyzed import process, improved duplicate detection, and successfully reimported payment data without duplicates."
+Data Import Failure,Failed data import for ATM withdrawal transactions.,"Verified data source compatibility, corrected import script syntax, and reimported withdrawal data successfully."
+Data Import Failure,Data import for mortgage repayment schedules resulted in incorrect due dates.,"Reviewed import mappings, rectified date formatting, and successfully reimported repayment schedule data."
+Data Import Failure,Failed data import for customer profile pictures.,"Checked image formats, resolved formatting errors, and successfully reimported profile pictures."
+Data Import Failure,Data import for account balances resulted in negative values.,"Analyzed data source, identified data corruption, and reimported account balance data with correct values."
+Data Import Failure,Data import of investment portfolio holdings failed to update.,"Reviewed import script logic, identified data type mismatches, and successfully reimported portfolio holdings."
+Data Import Failure,Failed data import for loan application data.,"Analyzed import process, fixed mapping discrepancies, and successfully reimported loan application records."
+Data Import Failure,Data import for currency exchange rates resulted in incomplete data.,"Verified data source completeness, corrected data formatting, and successfully reimported currency exchange rates."
+Data Import Failure,Failed data import for customer address changes.,"Reviewed import script, resolved data validation issues, and successfully reimported updated addresses."
+Data Import Failure,Data import of credit score data failed to match customer records.,"Verified data source integrity, corrected data mapping, and successfully reimported accurate credit score records."
+Data Import Failure,Failed data import of branch locations for ATM mapping.,"Checked source data consistency, addressed import script errors, and successfully reimported ATM location data."
+Data Import Failure,Data import for ACH transactions resulted in incorrect transaction types.,"Analyzed data source, fixed data labeling discrepancies, and successfully reimported ACH transaction data."
+Data Import Failure,Failed data import of customer account beneficiaries.,"Reviewed import format, corrected data anomalies, and successfully reimported beneficiary information."
+Data Import Failure,Data import of wire transfer requests failed to process,"Checked import script, resolved data parsing issues, and successfully reimported wire transfer data."
+Data Import Failure,Failed data import of account closure requests.,"Verified import script logic, addressed data validation errors, and successfully reimported account closure requests."
+Data Import Failure,Data import for loan payment history did not update correctly.,"Reviewed import process, fixed date formatting issues, and successfully reimported loan payment history."
+Data Import Failure,Failed data import of account overdraft alerts.,"Analyzed import script, identified data transformation errors, and successfully reimported overdraft alert data."
+Data Import Failure,Data Volume Overload: Large data volumes overwhelm the import process.,"AI system optimizes data import jobs, batches data transfers, and adjusts processing times."
+Application ,Application GUI was down,restart the App pool for the application to fix it.
+Application ,Customers are unable to log in to their accounts.,"Investigated authentication services, reset user passwords, and ensured secure login functionality.
+
+"
+Application ,Application crashes when customers attempt to make a transaction,"Analyzed application logs, identified memory leaks, and patched the application to prevent crashes."
+Application ,Incorrect account balances displayed after funds transfer.,"Reviewed transaction processing logic, corrected balance calculations, and updated account balances accurately."
+Application ,Transactions taking too long to process.,"Monitored transaction queue, optimized transaction processing code, and reduced transaction processing time."
+Application ,Account statement generation errors causing missing transactions.,"Audited statement generation logic, identified missing data points, and regenerated accurate account statements."
+Application ,Loan application form submission fails for some customers.,"Examined form validation, identified submission errors, and enabled error handling to prevent form submission failures."
+Application ,Currency conversion errors in international transactions.,"Reviewed currency conversion rates, updated conversion algorithms, and ensured accurate currency conversions."
+Application ,Inaccurate interest calculation in savings accounts.,"Checked interest rate settings, adjusted calculation algorithms, and updated interest calculations correctly."
+Application ,Investment portfolio not updating with latest market data.,"Analyzed data source integration, fixed API integration issues, and ensured accurate portfolio updates."
+Application ,ATM locator not providing accurate branch locations.,"Verified location data source, corrected address information, and updated ATM locator with accurate branch locations."
+Application ,Online bill payments not being processed.,"Investigated payment gateway integration, identified issues with payment APIs, and resolved payment processing errors."
+Application ,Customer credit score checks returning errors.,"Reviewed credit scoring service integration, fixed API endpoints, and ensured reliable credit score checks."
+Application ,Delay in sending account activity alerts to customers.,"Analyzed alert delivery system, optimized notification queues, and ensured timely account activity alerts."
+Application ,Mobile check deposit failing for certain check images,"Analyzed image processing code, enhanced image quality recognition, and improved check image processing."
+Application ,Credit card transactions declined despite available credit limit.,"Investigated transaction validation rules, identified discrepancies, and updated credit card transaction processing.
+
+"
+Application ,Application UI freezes during complex transactions,"Reviewed UI responsiveness, optimized UI rendering, and implemented background processing for complex tasks."
+Application ,Customers experiencing frequent session timeouts.,"Extended session timeout settings, implemented session renewal mechanisms, and provided warning prompts."
+Application , Slow loading times for customer profile pages.,"Optimized customer data retrieval queries, implemented caching for profiles, and ensured swift page loading."
+Application ,Errors in generating tax-related documents for customers.,"Reviewed document generation code, fixed data formatting issues, and successfully generated accurate tax documents."
+Application ,Application interface not displaying properly on certain devices.,"Conducted responsive design audit, fixed CSS issues, and ensured consistent UI rendering on all devices.
+
+"
+Application ,Online mortgage application form freezes during submission.,"Reviewed form validation code, optimized form submission handling, and ensured smooth mortgage application submission."
+Application ,Data import for loan payment history did not update correctly.,"Reviewed import process, fixed date formatting issues, and successfully reimported loan payment history."
+Application ,Mobile app crashes when customers attempt to view account history.,"Analyzed mobile app logs, identified memory usage spikes, and released memory resources to prevent crashes."
+Application ,Stock trading platform experiencing delays in order execution.,"Monitored trading platform performance, optimized order processing algorithms, and ensured timely trade execution."
