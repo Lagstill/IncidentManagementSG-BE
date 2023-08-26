@@ -18,5 +18,6 @@ issue_embeddings = get_embeddings(issues)
 
 pickle.dump(issue_embeddings, open('./processed_data/issue_embeddings.pkl', 'wb'))
 pickle.dump(resolution, open('./processed_data/resolution.pkl', 'wb'))
+pickle.dump(issues, open('./processed_data/issues.pkl', 'wb'))
 
 
