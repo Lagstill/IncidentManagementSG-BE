@@ -1,0 +1,43 @@
+name: Build and deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  process-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+
+      - name: install dependencies
+        run: pip install -r requirements.txt
+
+      - name: run processor
+        run: |
+          mkdir processed_data
+          python processor.py
+
+      - name: Docker Login
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build Image
+        shell: bash
+        run: |
+          docker build -f "$GITHUB_WORKSPACE/Dockerfile" -t alagu233/socgen01:latest .
+
+      - name: Push to dockerhub
+        shell: bash
+        run: |
+          docker push alagu233/socgen01:latest
+        

@@ -1,0 +1,50 @@
+Type,Issue ,Resolution
+FTR,File from Upstream Application is not reaching the downstream application folder.,FTR configuration (EDI) was not updated in the downstream application post informatica migration. The config was updated to resolve this issue.
+,Hyperion Essbase script was creating the file in source folder but failed to push it to the target folder.,2 jobs were creating 2 files at the same time which is creating deadlock while pushing the file in FTR. Jobs were rescheduled to fix this issue.
+,Upstream to downstream FTR  failed due to Keys.,"SSH keys mismatch, dev team sent the public SSH keys which FTR team updated at their end"
+,Files were created in upstream but 0 kb files were sent to downstream., Autosys team corrected the connection at autosys server end  to Fix it.
+Essbase,OPMN Services are down in Hyperion Essbase server,Essbase is not accessible. Windows team restarted the services to fix it
+,Essbase server switched from Primary to backup node which is not configured.,"Essbase is not accessible, Windows team needs to switch the instance back to resolve the issue."
+,Essbase config file was corrupted,Essbase server was unreachable. Restore the config file from the backup to fix the issue
+Database,Servers are not accessible due to Diskspace issue,Clean the unwanted large files/logs manually to increase the freespace to fix the issue.
+,Treatments are getting failed as no space in Temp DB,Freed Tempdb space to fix the incident.
+,Treatments are getting failed in Database as Tablespace is full.,Added more spaceinto the filesystem by DBA team to resolve the issue
+,Informatica is down due to DB issue,Db password was expired and reactivation the issue was resolved.
+,Application stopped working after DB release,While performing the Changes Dba misunderstood the requirement and decomissioned one active service by mistake. Service was restored by DBA and listeners were restarted to fix this.
+,Application is not accessible due to disk crash,Restore the database with backup to fix this issue
+,Batch failed in production environment due to DB connectivity issue,DBA parameter threshhold was updated to fix this issue.
+Application,Application GUI was down,restart the App pool for the application to fix it.
+"Server Outage
+
+","Hardware Failure: Critical server components fail, leading to server unavailability.",AI system detects hardware failures through monitoring and alerts admins for replacement.
+,Power Supply Issues: Power disruptions cause servers to shut down unexpectedly.,AI system installs backup power supply and automatically restarts affected servers.
+,Network Connectivity Problems: Network connection failures isolate servers from the network.,"AI system detects network issues, restarts network services, and logs incidents for review."
+,"Software Crashes: Critical software running on servers crashes, rendering them unusable.","AI system attempts to restart software, roll back to stable version, or initiate a failover."
+,"Resource Exhaustion: Server resources such as CPU, memory, or disk space are fully utilized.","AI system allocates additional resources, optimizes processes, or migrates services."
+"Database Performance Degradation
+
+","Index Fragmentation: Database indexes become fragmented, leading to slow query execution.",AI system schedules regular index maintenance to defragment indexes.
+,Data Volume Increase: Growing data volume results in longer query times and performance issues.,"AI system optimizes queries, implements query caching, or proposes database partitioning."
+,"Resource Contention: Other processes compete for database resources, slowing queries.","AI system adjusts resource allocation, prioritizing critical queries."
+,Query Plan Changes: Database query optimizer generates suboptimal query plans.,"AI system analyzes query plans, identifies bottlenecks, and suggests optimizations."
+,Server Misconfiguration: Incorrect database configuration impacts performance.,"AI system detects and reverts misconfigurations, restores optimal settings."
+"Network Connectivity Issues
+
+",DNS Resolution Failures: DNS servers fail to resolve domain names to IP addresses.,"AI system verifies DNS server health, switches to backup servers, and logs the incident."
+,Firewall Blocking: Incorrect firewall rules prevent users from accessing specific resources.,"AI system reviews firewall rules, corrects misconfigurations, and ensures proper access."
+,"Router Malfunctions: Network routers malfunction, causing intermittent connectivity issues.","AI system monitors router health, triggers diagnostics, and alerts administrators."
+,Bandwidth Saturation: Excessive network traffic saturates available bandwidth.,"AI system identifies traffic spikes, prioritizes critical traffic, and recommends bandwidth upgrades."
+,VPN Connectivity Problems: Users encounter problems connecting to the corporate VPN.,"AI system monitors VPN connections, troubleshoots failures, and guides users through reconnection."
+"Application Performance Drop
+
+","Memory Leaks: Applications consume increasing amounts of memory, leading to crashes.","AI system monitors memory usage, triggers cleanups, and restarts affected applications."
+,Compatibility Issues: Application updates cause conflicts with other software components.,"AI system tests updates in a sandbox, checks for conflicts, and recommends adjustments."
+,Database Connection Failures: Applications cannot connect to the database.,"AI system detects connection failures, retries connections, and logs the incident."
+,"Resource Starvation: Applications compete for system resources, causing slowdowns.","AI system monitors resource usage, optimizes resource allocation, and initiates load balancing."
+,External API Failures: Applications rely on external APIs that experience outages or delays.,"AI system monitors API status, switches to backup APIs, and retries failed requests."
+"Data Import Failure
+",API Changes: External APIs used for data import change their structure or endpoints.,"AI system adapts import scripts, tests new APIs, and updates data mapping."
+,Data Format Incompatibility: Imported data is in a format not supported by the import process.,"AI system identifies data format mismatches, transforms data, and retries imports."
+,Network Disruptions: Network connectivity issues prevent data transfer from external sources.,"AI system monitors network status, retries transfers, and alerts administrators."
+,Authentication Failures: Access credentials for external sources are incorrect or expired.,"AI system updates credentials, attempts reauthentication, and logs incidents."
+,Data Volume Overload: Large data volumes overwhelm the import process.,"AI system optimizes data import jobs, batches data transfers, and adjusts processing times."
