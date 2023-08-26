@@ -25,6 +25,9 @@ Our self-healing incident documentation system involves the following components
 - **Azure App Service:** Hosts our backend application.
 - **Incident Management Logic:** Embedded logic for detecting and responding to incidents.
 
+![](https://github.com/Lagstill/SocGen-BE/blob/main/Pipeline.jpg)
+
+
 ## 3. Technologies Used
 
 - GitHub Actions
