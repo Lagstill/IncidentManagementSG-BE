@@ -9,7 +9,7 @@ Welcome to the documentation for the self-healing incident system in our backend
 1. [Introduction](#introduction)
 2. [Workflow Overview](#workflow-overview)
 3. [Technologies Used](#technologies-used)
- Workflow details in documentation
+## Workflow details in documentation
 
 ## 1. Introduction
 
