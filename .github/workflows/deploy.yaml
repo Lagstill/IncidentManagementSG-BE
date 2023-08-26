@@ -40,4 +40,11 @@ jobs:
         shell: bash
         run: |
           docker push alagu233/socgen01:latest
+
+      - name: Deploy to Azure
+        uses: azure/webapps-deploy@v2
+        with:
+          publish-profile: ${{ secrets.PUBLISH_PROFILE}}
+          app-name: SOCGEN
+          images: alagu233/socgen01:latest
         
