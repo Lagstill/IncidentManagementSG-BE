@@ -34,17 +34,17 @@ jobs:
       - name: Build Image
         shell: bash
         run: |
-          docker build -f "$GITHUB_WORKSPACE/Dockerfile" -t alagu233/socgen01:latest .
+          docker build -f "$GITHUB_WORKSPACE/Dockerfile" -t alagu233/incidenetmgt01:latest .
 
       - name: Push to dockerhub
         shell: bash
         run: |
-          docker push alagu233/socgen01:latest
+          docker push alagu233/incidenetmgt01:latest
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
         with:
           publish-profile: ${{ secrets.PUBLISH_PROFILE}}
-          app-name: SOCGEN
-          images: alagu233/socgen01:latest
+          app-name: incidenetmgt
+          images: alagu233/incidenetmgt01:latest
         
